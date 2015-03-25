@@ -5,7 +5,7 @@ using System.Web;
 
 namespace WebApi.Models
 {
-    public class ExchangeStatics
+    public class ExchangeStatistics
     {
         public string Date { get; set; }
         public string Time { get; set; }

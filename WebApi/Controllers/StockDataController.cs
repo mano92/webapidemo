@@ -21,21 +21,28 @@ namespace WebApi.Controllers
         [System.Web.Mvc.HttpGet]
         public IEnumerable<string[]> GetExchangeStatics()
         {
-            var results = data.ExchangeStatics();
+            var results = data.ExchangeStatistics();
             return results;
         }
 
         [System.Web.Mvc.HttpGet]
-        public IEnumerable<MarketStatics> GetMarketStatics()
+        public IEnumerable<MarketStatistics> GetMarketStatics()
         {
-            var results = data.MarketStatics();
+            var results = data.MarketStatistics();
             return results;
         }
 
         [System.Web.Mvc.HttpGet]
         public IEnumerable<IndexesStatistics> GetIndexesStatics()
         {
-            var results = data.IndexesStatics();
+            var results = data.IndexesStatistics();
+            return results;
+        }
+
+        [System.Web.Mvc.HttpGet]
+        public IEnumerable<TradingStatistics> GetTradingStatics()
+        {
+            var results = data.TradingStatistics();
             return results;
         }
     }

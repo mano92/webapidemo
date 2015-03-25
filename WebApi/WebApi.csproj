@@ -161,9 +161,10 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\StockExchangeData.cs" />
-    <Compile Include="Models\ExchangeStatics.cs" />
+    <Compile Include="Models\ExchangeStatistics.cs" />
     <Compile Include="Models\IndexesStatistics.cs" />
-    <Compile Include="Models\MarketStatics.cs" />
+    <Compile Include="Models\MarketStatistics.cs" />
+    <Compile Include="Models\TradingStatistics.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -12,6 +12,7 @@ namespace WebApi.Models
         public string High { get; set; }
         public string Low { get; set; }
         public string Change { get; set; }
+        public string ChangeFlag { get; set; }
         public string Volume { get; set; }
         public string Value { get; set; }
     }

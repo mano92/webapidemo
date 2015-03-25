@@ -5,7 +5,7 @@ using System.Web;
 
 namespace WebApi.Models
 {
-    public class MarketStatics
+    public class MarketStatistics
     {
         public string MarketName { get; set; }
         public string State { get; set; }
