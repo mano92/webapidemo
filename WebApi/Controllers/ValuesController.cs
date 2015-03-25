@@ -11,11 +11,11 @@ namespace WebApi.Controllers
 {
     public class ValuesController : ApiController
     {
-        private KarachiStockExchangeData data;
+        private StockExchangeData data;
 
         public ValuesController()
         {
-            data = new KarachiStockExchangeData();
+            data = new StockExchangeData();
         }
 
         // GET api/values
@@ -23,21 +23,6 @@ namespace WebApi.Controllers
         {
             return new string[] { "value1", "value2" };
         }
-
-        public IEnumerable<string[]> GetExchangeStatics()
-        {
-            //var marketStatics = new ExchangeStatics();
-            var htmlCode = string.Empty;
-            using (var client = new WebClient())
-            {
-                client.Headers.Add(HttpRequestHeader.UserAgent, "AvoidError");
-                htmlCode = client.DownloadString("http://dps.kse.com.pk/webpages/ts/tsstats.php?mode=1");
-            }
-            var results = data.ReturnMarketData(htmlCode, "marketData");
-            return results;
-            //return new string[] { "value1", "value2" };
-        }
-
         // GET api/values/5
         public string Get(int id)
         {
